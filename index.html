@@ -1,0 +1,883 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Raízes — Turismo, Cultura e Diversidade</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/components.css">
+</head>
+<body>
+
+  <!-- Sprite de ícones -->
+  <svg xmlns="http://www.w3.org/2000/svg" style="display:none" aria-hidden="true">
+    <symbol id="i-food" viewBox="0 0 24 24"><path d="M3 11v2a4 4 0 004 4h1v-9H5a2 2 0 00-2 2zM13 8v13h2V8M17 8v13h1a4 4 0 004-4v-2a2 2 0 00-2-2h-3zM9 3v18"/></symbol>
+    <symbol id="i-history" viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/></symbol>
+    <symbol id="i-culture" viewBox="0 0 24 24"><path d="M12 3l1.5 4.5L18 9l-4.5 1.5L12 15l-1.5-4.5L6 9l4.5-1.5L12 3z"/><path d="M5 19h14M8 22h8"/></symbol>
+    <symbol id="i-music" viewBox="0 0 24 24"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></symbol>
+    <symbol id="i-art" viewBox="0 0 24 24"><circle cx="13.5" cy="6.5" r=".5" fill="currentColor" stroke="none"/><circle cx="17.5" cy="10.5" r=".5" fill="currentColor" stroke="none"/><circle cx="8.5" cy="7.5" r=".5" fill="currentColor" stroke="none"/><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 011.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.554C21.965 6.012 17.461 2 12 2z"/></symbol>
+    <symbol id="i-arch" viewBox="0 0 24 24"><path d="M3 21h18M6 21V7l6-4 6 4v14M10 21v-4h4v4"/></symbol>
+    <symbol id="i-events" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></symbol>
+    <symbol id="i-nature" viewBox="0 0 24 24"><path d="M11 20A7 7 0 019.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></symbol>
+    <symbol id="i-religion" viewBox="0 0 24 24"><path d="M12 2v20M2 12h20M5 5l14 14M19 5L5 19"/></symbol>
+    <symbol id="i-community" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 00-4-4H6a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></symbol>
+    <symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></symbol>
+    <symbol id="i-indigenous" viewBox="0 0 24 24"><path d="M12 2l3 7h7l-5.5 4 2 7L12 16l-6.5 4 2-7L2 9h7l3-7z"/></symbol>
+    <symbol id="i-afro" viewBox="0 0 24 24"><path d="M12 2l2.4 7.2H22l-6 4.6 2.3 7.2L12 16.8 5.7 21.1 8 13.8l-6-4.6h7.6L12 2z"/></symbol>
+    <symbol id="i-lgbt" viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></symbol>
+    <symbol id="i-access" viewBox="0 0 24 24"><circle cx="12" cy="4" r="2"/><path d="M15 8H9l-1 8h4l-1 8M6 12h12"/></symbol>
+    <symbol id="i-neuro" viewBox="0 0 24 24"><path d="M12 2a7 7 0 017 7c0 2.38-1.19 4.47-3 5.74V17a2 2 0 01-2 2h-4a2 2 0 01-2-2v-2.26C6.19 13.47 5 11.38 5 9a7 7 0 017-7z"/><path d="M10 21h4"/></symbol>
+    <symbol id="i-walk" viewBox="0 0 24 24"><circle cx="13" cy="4" r="2"/><path d="M7 21l3-7 4 1 3-6 3 1-4 10"/></symbol>
+    <symbol id="i-bus" viewBox="0 0 24 24"><path d="M8 6v6M15 6v6M2 12h19a2 2 0 012 2v4a2 2 0 01-2 2H2v-8z"/><circle cx="7" cy="18" r="2"/><circle cx="17" cy="18" r="2"/></symbol>
+    <symbol id="i-car" viewBox="0 0 24 24"><path d="M7 17h10M5 11l1-4h12l1 4"/><path d="M5 11v6h14v-6l-2-5H7l-2 5z"/><circle cx="7.5" cy="17.5" r="1.5"/><circle cx="16.5" cy="17.5" r="1.5"/></symbol>
+    <symbol id="i-bike" viewBox="0 0 24 24"><circle cx="5.5" cy="17.5" r="3.5"/><circle cx="18.5" cy="17.5" r="3.5"/><path d="M15 6a1 1 0 100-2 1 1 0 000 2zm-3 11.5V9l3-2 2 3h3"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s7-4.5 7-11a7 7 0 10-14 0c0 6.5 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></symbol>
+    <symbol id="i-map" viewBox="0 0 24 24"><path d="M9 19l-6-3V6l6 3 6-3 6 3v10l-6-3-6 3z"/><path d="M9 6v10M15 3v10"/></symbol>
+    <symbol id="i-route" viewBox="0 0 24 24"><circle cx="6" cy="18" r="2"/><circle cx="18" cy="6" r="2"/><path d="M8 17l8-8"/></symbol>
+    <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></symbol>
+    <symbol id="i-star" viewBox="0 0 24 24"><path d="M12 2l2.4 7.2H22l-6 4.6 2.3 7.2L12 16.8 5.7 21.1 8 13.8l-6-4.6h7.6L12 2z"/></symbol>
+    <symbol id="i-compass" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M16.24 7.76l-2.12 6.36-6.36 2.12 2.12-6.36 6.36-2.12z"/></symbol>
+    <symbol id="i-ramp" viewBox="0 0 24 24"><path d="M3 17l7-7 4 4 7-7"/><path d="M14 7h7v7"/></symbol>
+    <symbol id="i-elevator" viewBox="0 0 24 24"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M12 8v8M9 11l3-3 3 3M9 13l3 3 3-3"/></symbol>
+    <symbol id="i-restroom" viewBox="0 0 24 24"><circle cx="12" cy="4" r="2"/><path d="M10 22V12H6v10M18 22V12h-4v10M8 12h8"/></symbol>
+    <symbol id="i-eye" viewBox="0 0 24 24"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></symbol>
+    <symbol id="i-settings" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 1 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 1 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 1 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></symbol>
+    <symbol id="i-book" viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/></symbol>
+    <symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></symbol>
+    <symbol id="i-share" viewBox="0 0 24 24"><path d="M4 12v8a2 2 0 002 2h12a2 2 0 002-2v-8M16 6l-4-4-4 4M12 2v13"/></symbol>
+    <symbol id="i-play" viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3" fill="currentColor" stroke="none"/></symbol>
+    <symbol id="i-back" viewBox="0 0 24 24"><path d="M15 18l-6-6 6-6"/></symbol>
+    <symbol id="i-sparkle" viewBox="0 0 24 24"><path d="M12 3l1.4 4.3H18l-3.6 2.6 1.4 4.3L12 11.6 8.2 14.2l1.4-4.3L6 7.3h4.6L12 3z"/></symbol>
+    <symbol id="i-patrimony" viewBox="0 0 24 24"><path d="M3 21h18M8 21V10l4-3 4 3v11M12 7V3"/></symbol>
+    <symbol id="i-diversity" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></symbol>
+    <symbol id="i-local" viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><path d="M9 22V12h6v10"/></symbol>
+    <symbol id="i-audio" viewBox="0 0 24 24"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5" fill="currentColor" stroke="none"/><path d="M15.54 8.46a5 5 0 010 7.07M19.07 4.93a10 10 0 010 14.14"/></symbol>
+  </svg>
+
+  <!-- Frame do celular -->
+  <div class="device-wrap">
+    <div class="device">
+      <div class="device-notch"></div>
+      <div class="device-screen" id="deviceScreen">
+
+        <!-- ═══ TELA 1: SPLASH ═══ -->
+        <section class="screen active" id="screen-splash">
+          <div class="splash-bg">
+            <img src="https://images.unsplash.com/photo-1555881400-74d7acaacd8b?auto=format&fit=crop&w=800&q=80" alt="Vista aérea de cidade histórica">
+            <div class="splash-overlay"></div>
+          </div>
+          <div class="splash-content">
+            <div class="splash-badge">Descoberta cultural</div>
+            <h1>Raízes</h1>
+            <p>Conheça uma cidade pelas pessoas, culturas e histórias que construíram sua identidade.</p>
+            <div class="splash-actions">
+              <button class="btn-primary btn-lg" data-go="onboarding">Começar a explorar</button>
+            </div>
+          </div>
+          <div class="splash-dots">
+            <span class="dot active"></span><span class="dot"></span><span class="dot"></span>
+          </div>
+        </section>
+
+        <!-- ═══ TELA 2: ONBOARDING ═══ -->
+        <section class="screen" id="screen-onboarding">
+          <div class="onboard-header">
+            <button class="btn-icon back-btn" id="onboardBack" aria-label="Voltar">
+              <svg class="ico"><use href="#i-back"/></svg>
+            </button>
+            <div class="progress-bar"><div class="progress-fill" id="onboardProgress" style="width:25%"></div></div>
+            <span class="step-label" id="stepLabel">1 de 4</span>
+          </div>
+
+          <div class="onboard-steps">
+            <!-- Step 1 -->
+            <div class="onboard-step active" data-step="1">
+              <div class="onboard-step-head">
+                <h2>O que você gosta de conhecer?</h2>
+                <p class="subtitle">Selecione quantos quiser</p>
+              </div>
+              <div class="chip-grid">
+                <button class="chip selected" data-chip><svg class="ico"><use href="#i-food"/></svg><span>Gastronomia</span></button>
+                <button class="chip selected" data-chip><svg class="ico"><use href="#i-history"/></svg><span>História</span></button>
+                <button class="chip" data-chip><svg class="ico"><use href="#i-culture"/></svg><span>Cultura</span></button>
+                <button class="chip" data-chip><svg class="ico"><use href="#i-music"/></svg><span>Música</span></button>
+                <button class="chip selected" data-chip><svg class="ico"><use href="#i-art"/></svg><span>Arte</span></button>
+                <button class="chip" data-chip><svg class="ico"><use href="#i-arch"/></svg><span>Arquitetura</span></button>
+                <button class="chip" data-chip><svg class="ico"><use href="#i-events"/></svg><span>Eventos</span></button>
+                <button class="chip" data-chip><svg class="ico"><use href="#i-nature"/></svg><span>Natureza</span></button>
+                <button class="chip" data-chip><svg class="ico"><use href="#i-religion"/></svg><span>Religiões</span></button>
+                <button class="chip" data-chip><svg class="ico"><use href="#i-community"/></svg><span>Comunidades</span></button>
+              </div>
+            </div>
+            <!-- Step 2 -->
+            <div class="onboard-step" data-step="2">
+              <div class="onboard-step-head">
+                <h2>Temas de diversidade</h2>
+                <p class="subtitle">O que você gostaria de conhecer?</p>
+              </div>
+              <div class="chip-grid">
+                <button class="chip selected" data-chip><svg class="ico"><use href="#i-globe"/></svg><span>Étnica e racial</span></button>
+                <button class="chip" data-chip><svg class="ico"><use href="#i-indigenous"/></svg><span>Cultura indígena</span></button>
+                <button class="chip selected" data-chip><svg class="ico"><use href="#i-afro"/></svg><span>Afro-brasileira</span></button>
+                <button class="chip" data-chip><svg class="ico"><use href="#i-lgbt"/></svg><span>Gênero e sexualidade</span></button>
+                <button class="chip" data-chip><svg class="ico"><use href="#i-religion"/></svg><span>Religiosa</span></button>
+                <button class="chip" data-chip><svg class="ico"><use href="#i-community"/></svg><span>Geracional</span></button>
+                <button class="chip" data-chip><svg class="ico"><use href="#i-access"/></svg><span>Acessibilidade</span></button>
+                <button class="chip" data-chip><svg class="ico"><use href="#i-neuro"/></svg><span>Neurodiversidade</span></button>
+                <button class="chip wide" data-chip><svg class="ico"><use href="#i-sparkle"/></svg><span>Quero conhecer de tudo</span></button>
+              </div>
+            </div>
+            <!-- Step 3 -->
+            <div class="onboard-step" data-step="3">
+              <div class="onboard-step-head">
+                <h2>Como você explora?</h2>
+                <p class="subtitle">Suas preferências de viagem</p>
+              </div>
+              <div class="option-cards">
+                <button class="option-card selected" data-option>
+                  <svg class="ico ico-lg"><use href="#i-walk"/></svg>
+                  <strong>Caminhando</strong>
+                </button>
+                <button class="option-card" data-option>
+                  <svg class="ico ico-lg"><use href="#i-bus"/></svg>
+                  <strong>Transporte público</strong>
+                </button>
+                <button class="option-card" data-option>
+                  <svg class="ico ico-lg"><use href="#i-car"/></svg>
+                  <strong>Carro</strong>
+                </button>
+                <button class="option-card" data-option>
+                  <svg class="ico ico-lg"><use href="#i-bike"/></svg>
+                  <strong>Bicicleta</strong>
+                </button>
+              </div>
+              <h3 class="mini-title">Tempo disponível</h3>
+              <div class="chip-row">
+                <button class="chip sm" data-chip>1h</button>
+                <button class="chip sm selected" data-chip>2h</button>
+                <button class="chip sm" data-chip>Meio dia</button>
+                <button class="chip sm" data-chip>1 dia</button>
+                <button class="chip sm" data-chip>Fim de semana</button>
+              </div>
+            </div>
+            <!-- Step 4 -->
+            <div class="onboard-step location-step" data-step="4">
+              <div class="location-hero">
+                <img src="https://images.unsplash.com/photo-1555881400-74d7acaacd8b?auto=format&fit=crop&w=800&q=80" alt="Centro histórico de Salvador">
+                <div class="location-hero-overlay"></div>
+                <div class="location-tag">Salvador, BA</div>
+                <div class="location-hero-content">
+                  <div class="location-icon-wrap">
+                    <svg class="ico ico-lg"><use href="#i-pin"/></svg>
+                  </div>
+                  <h2>Permitir localização?</h2>
+                  <p>Usamos sua posição para recomendar experiências culturais próximas e montar roteiros personalizados.</p>
+                </div>
+              </div>
+              <p class="location-note">Sua localização não é compartilhada com terceiros. Você pode alterar isso depois nas configurações.</p>
+            </div>
+          </div>
+
+          <div class="onboard-footer">
+            <button class="btn-primary btn-lg" id="onboardNext">Continuar</button>
+          </div>
+        </section>
+
+        <!-- ═══ TELA 3: HOME ═══ -->
+        <section class="screen has-bottom-nav" id="screen-home">
+          <div class="home-header">
+            <div class="home-greeting">
+              <span class="greeting-sub">Bom dia, Ana</span>
+              <h2>Explore a diversidade ao seu redor</h2>
+              <span class="location-pill">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s7-4.5 7-11a7 7 0 10-14 0c0 6.5 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+                Salvador, BA
+              </span>
+            </div>
+            <button class="btn-icon notif-btn" aria-label="Notificações">
+              <svg class="ui-icon" viewBox="0 0 24 24"><path d="M18 8a6 6 0 10-12 0c0 7-3 9-3 9h18s-3-2-3-9M13.73 21a2 2 0 01-3.46 0"/></svg>
+            </button>
+          </div>
+
+          <div class="region-banner section-block">
+            <img src="https://images.unsplash.com/photo-1555881400-74d7acaacd8b?auto=format&fit=crop&w=800&q=80" alt="Pelourinho, Salvador">
+            <div class="region-banner-text">
+              <span class="region-label">Você está em</span>
+              <strong>Salvador, BA</strong>
+              <p>Influências indígenas, afro-brasileiras e migratórias moldam esta região.</p>
+            </div>
+          </div>
+
+          <div class="section-block">
+          <div class="section-head">
+            <h3>Perto de você</h3>
+            <button class="link-btn" data-go="discover">Ver todos</button>
+          </div>
+          <div class="h-scroll cards-near">
+            <article class="near-card" data-go="place">
+              <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=400&q=80" alt="Feira cultural">
+              <div class="near-card-body">
+                <span class="near-dist">600 m</span>
+                <h4>Feira de São Joaquim</h4>
+                <span class="near-cat"><svg class="ico ico-sm"><use href="#i-food"/></svg> Gastronomia · Cultura local</span>
+              </div>
+            </article>
+            <article class="near-card" data-go="place">
+              <img src="https://images.unsplash.com/photo-1582552936334-5f8996b07112?auto=format&fit=crop&w=400&q=80" alt="Museu">
+              <div class="near-card-body">
+                <span class="near-dist">1,2 km</span>
+                <h4>Museu Afro-Brasileiro</h4>
+                <span class="near-cat"><svg class="ico ico-sm"><use href="#i-history"/></svg> História · Diversidade étnica</span>
+              </div>
+            </article>
+            <article class="near-card" data-go="place">
+              <img src="https://images.unsplash.com/photo-1460661419346-148dbac24684?auto=format&fit=crop&w=400&q=80" alt="Centro cultural">
+              <div class="near-card-body">
+                <span class="near-dist">2,1 km</span>
+                <h4>Centro Cultural Casa do Carnaval</h4>
+                <span class="near-cat"><svg class="ico ico-sm"><use href="#i-art"/></svg> Arte · Eventos</span>
+              </div>
+            </article>
+          </div>
+          </div>
+
+          <div class="section-block">
+          <div class="section-head">
+            <h3>Histórias próximas</h3>
+          </div>
+          <div class="story-card" data-go="place">
+            <div class="story-thumb">
+              <img src="https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=300&q=80" alt="Monumento histórico">
+            </div>
+            <div class="story-body">
+              <span class="story-dist">A 300 m de você</span>
+              <h4>O Pelourinho e a resistência</h4>
+              <p>Centro histórico reconhecido pela UNESCO, palco de manifestações afro-brasileiras.</p>
+              <button class="btn-audio"><svg class="ico ico-sm ico-fill"><use href="#i-play"/></svg> Ouvir história</button>
+            </div>
+          </div>
+          </div>
+
+          <div class="section-block">
+          <div class="section-head">
+            <h3>Roteiros temáticos</h3>
+            <button class="link-btn" data-go="route-result">Explorar</button>
+          </div>
+          <div class="theme-routes">
+            <button class="theme-route" data-go="route-result">
+              <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=300&q=80" alt="Gastronomia">
+              <span>Sabores da região</span>
+            </button>
+            <button class="theme-route" data-go="route-result">
+              <img src="https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?auto=format&fit=crop&w=300&q=80" alt="Cultura afro">
+              <span>Caminhos afro-brasileiros</span>
+            </button>
+            <button class="theme-route" data-go="route-result">
+              <img src="https://images.unsplash.com/photo-1544981031-093275635060?auto=format&fit=crop&w=300&q=80" alt="Religião">
+              <span>Diversidade religiosa</span>
+            </button>
+          </div>
+          </div>
+        </section>
+
+        <!-- ═══ TELA 4: EXPLORAR ═══ -->
+        <section class="screen has-bottom-nav" id="screen-discover">
+          <div class="discover-top">
+            <h2>Explorar</h2>
+            <div class="search-bar">
+              <svg class="ui-icon" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+              <input type="search" placeholder="Buscar lugares, eventos, histórias…">
+            </div>
+            <div class="filter-chips scroll-x">
+              <button class="filter-chip active">Todos</button>
+              <button class="filter-chip">Aberto agora</button>
+              <button class="filter-chip">Gratuito</button>
+              <button class="filter-chip">Acessível</button>
+              <button class="filter-chip">Hoje</button>
+              <button class="filter-chip">Até 3 km</button>
+            </div>
+          </div>
+
+          <div class="category-grid">
+            <button class="cat-item" data-go="place">
+              <div class="cat-icon"><svg class="ico ico-lg"><use href="#i-food"/></svg></div>
+              <span>Gastronomia</span>
+            </button>
+            <button class="cat-item" data-go="place">
+              <div class="cat-icon"><svg class="ico ico-lg"><use href="#i-history"/></svg></div>
+              <span>História</span>
+            </button>
+            <button class="cat-item" data-go="place">
+              <div class="cat-icon"><svg class="ico ico-lg"><use href="#i-culture"/></svg></div>
+              <span>Cultura</span>
+            </button>
+            <button class="cat-item" data-go="events">
+              <div class="cat-icon"><svg class="ico ico-lg"><use href="#i-events"/></svg></div>
+              <span>Eventos</span>
+            </button>
+            <button class="cat-item" data-go="place">
+              <div class="cat-icon"><svg class="ico ico-lg"><use href="#i-art"/></svg></div>
+              <span>Arte</span>
+            </button>
+            <button class="cat-item" data-go="place">
+              <div class="cat-icon"><svg class="ico ico-lg"><use href="#i-music"/></svg></div>
+              <span>Música</span>
+            </button>
+            <button class="cat-item" data-go="place">
+              <div class="cat-icon"><svg class="ico ico-lg"><use href="#i-religion"/></svg></div>
+              <span>Religião</span>
+            </button>
+            <button class="cat-item" data-go="place">
+              <div class="cat-icon"><svg class="ico ico-lg"><use href="#i-patrimony"/></svg></div>
+              <span>Patrimônio</span>
+            </button>
+            <button class="cat-item" data-go="place">
+              <div class="cat-icon"><svg class="ico ico-lg"><use href="#i-diversity"/></svg></div>
+              <span>Diversidade</span>
+            </button>
+            <button class="cat-item" data-go="place">
+              <div class="cat-icon"><svg class="ico ico-lg"><use href="#i-access"/></svg></div>
+              <span>Acessibilidade</span>
+            </button>
+            <button class="cat-item" data-go="place">
+              <div class="cat-icon"><svg class="ico ico-lg"><use href="#i-local"/></svg></div>
+              <span>Experiências locais</span>
+            </button>
+          </div>
+
+          <div class="section-head">
+            <h3>Destaques culturais</h3>
+          </div>
+          <div class="discover-list">
+            <article class="discover-item" data-go="place">
+              <img src="https://images.unsplash.com/photo-1533174072545-7a4b6ad508fa?auto=format&fit=crop&w=200&q=80" alt="Terreiro">
+              <div>
+                <h4>Terreiro Ilê Axé Opô Afonjá</h4>
+                <p>Religião · 3,4 km · Aberto sábados</p>
+                <div class="tag-row">
+                  <span class="tag">Afro-brasileira</span>
+                  <span class="tag">Religiosa</span>
+                </div>
+              </div>
+            </article>
+            <article class="discover-item" data-go="place">
+              <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=200&q=80" alt="Restaurante">
+              <div>
+                <h4>Restaurante do Sabor da Bahia</h4>
+                <p>Gastronomia · 800 m · $$</p>
+                <div class="tag-row">
+                  <span class="tag">Comunitário</span>
+                  <span class="tag">Tradicional</span>
+                </div>
+              </div>
+            </article>
+            <article class="discover-item" data-go="place">
+              <img src="https://images.unsplash.com/photo-1531243268764-789783257831?auto=format&fit=crop&w=200&q=80" alt="Galeria">
+              <div>
+                <h4>Galeria Arte Negra</h4>
+                <p>Arte · 1,5 km · Gratuito</p>
+                <div class="tag-row">
+                  <span class="tag">LGBTQIA+</span>
+                  <span class="tag">Arte</span>
+                </div>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <!-- ═══ TELA 5: MAPA ═══ -->
+        <section class="screen has-bottom-nav" id="screen-map">
+          <div class="map-top">
+            <h2>Mapa cultural</h2>
+            <div class="map-search">
+              <svg class="ui-icon" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+              <input type="search" placeholder="O que existe ao meu redor?">
+            </div>
+          </div>
+          <div class="map-scroll">
+          <div class="map-container">
+            <div class="map-bg"></div>
+            <div class="map-user-pin"><div class="user-pulse"></div></div>
+            <button class="map-pin pin-museum" data-go="place" style="top:22%;left:28%" title="Museu" aria-label="Museu"></button>
+            <button class="map-pin pin-food" data-go="place" style="top:35%;left:62%" title="Restaurante" aria-label="Restaurante"></button>
+            <button class="map-pin pin-event" data-go="events" style="top:48%;left:18%" title="Evento" aria-label="Evento"></button>
+            <button class="map-pin pin-religion" data-go="place" style="top:55%;left:72%" title="Terreiro" aria-label="Terreiro"></button>
+            <button class="map-pin pin-culture" data-go="place" style="top:68%;left:45%" title="Centro cultural" aria-label="Centro cultural"></button>
+            <button class="map-pin pin-history" data-go="place" style="top:30%;left:80%" title="Monumento" aria-label="Monumento"></button>
+          </div>
+          <div class="map-legend scroll-x">
+            <span class="legend-item"><span class="legend-dot" style="background:#b45309"></span> Museus</span>
+            <span class="legend-item"><span class="legend-dot" style="background:#059669"></span> Gastronomia</span>
+            <span class="legend-item"><span class="legend-dot" style="background:#7c3aed"></span> Eventos</span>
+            <span class="legend-item"><span class="legend-dot" style="background:#0891b2"></span> Religião</span>
+            <span class="legend-item"><span class="legend-dot" style="background:#db2777"></span> Cultura</span>
+          </div>
+          <div class="map-sheet">
+            <div class="sheet-handle"></div>
+            <h4>6 lugares próximos</h4>
+            <div class="map-sheet-list">
+              <button class="map-sheet-item" data-go="place">
+                <img src="https://images.unsplash.com/photo-1582552936334-5f8996b07112?auto=format&fit=crop&w=100&q=80" alt="Museu Afro-Brasileiro">
+                <div><strong>Museu Afro-Brasileiro</strong><small>1,2 km · História</small></div>
+              </button>
+              <button class="map-sheet-item" data-go="place">
+                <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=100&q=80" alt="Feira de São Joaquim">
+                <div><strong>Feira de São Joaquim</strong><small>600 m · Gastronomia</small></div>
+              </button>
+              <button class="map-sheet-item" data-go="place">
+                <img src="https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=100&q=80" alt="Pelourinho">
+                <div><strong>Pelourinho</strong><small>900 m · História</small></div>
+              </button>
+              <button class="map-sheet-item" data-go="events">
+                <img src="https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?auto=format&fit=crop&w=100&q=80" alt="Roda de samba">
+                <div><strong>Roda de samba no Pelô</strong><small>1,5 km · Evento hoje</small></div>
+              </button>
+              <button class="map-sheet-item" data-go="place">
+                <img src="https://images.unsplash.com/photo-1460661419346-148dbac24684?auto=format&fit=crop&w=100&q=80" alt="Centro cultural">
+                <div><strong>Centro Cultural Casa do Carnaval</strong><small>2,1 km · Cultura</small></div>
+              </button>
+              <button class="map-sheet-item" data-go="place">
+                <img src="https://images.unsplash.com/photo-1533174072545-7a4b6ad508fa?auto=format&fit=crop&w=100&q=80" alt="Terreiro">
+                <div><strong>Terreiro Ilê Axé</strong><small>3,4 km · Religião</small></div>
+              </button>
+            </div>
+          </div>
+          </div>
+        </section>
+
+        <!-- ═══ TELA 6: DETALHE DO LOCAL ═══ -->
+        <section class="screen" id="screen-place">
+          <div class="place-hero">
+            <div class="place-gallery" id="placeGallery">
+              <img class="gallery-slide active" src="https://images.unsplash.com/photo-1582552936334-5f8996b07112?auto=format&fit=crop&w=800&q=80" alt="Fachada do museu">
+              <img class="gallery-slide" src="https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=800&q=80" alt="Interior do museu">
+              <img class="gallery-slide" src="https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?auto=format&fit=crop&w=800&q=80" alt="Exposição cultural">
+            </div>
+            <div class="gallery-dots" id="galleryDots">
+              <span class="dot active"></span><span class="dot"></span><span class="dot"></span>
+            </div>
+            <button class="btn-icon place-back" data-go="home" aria-label="Voltar">
+              <svg class="ui-icon" viewBox="0 0 24 24"><path d="M15 18l-6-6 6-6"/></svg>
+            </button>
+            <button class="btn-icon place-fav" aria-label="Favoritar">
+              <svg class="ui-icon fav-icon" viewBox="0 0 24 24"><path d="M12 20.5l-1.2-1.1C5.4 14.4 2 11.3 2 7.5 2 5 4 3 6.5 3c1.7 0 3.4.8 4.4 2.1C12.1 3.8 13.8 3 15.5 3 18 3 20 5 20 7.5c0 3.8-3.4 6.9-8.8 11.9L12 20.5z"/></svg>
+            </button>
+          </div>
+
+          <div class="place-body">
+            <div class="place-meta">
+              <span class="place-cat">Museu · História</span>
+              <span class="place-dist"><svg class="ico ico-sm"><use href="#i-pin"/></svg> 1,2 km</span>
+            </div>
+            <h1>Museu Afro-Brasileiro</h1>
+
+            <div class="info-pills">
+              <span>Ter–Dom 10h–17h</span>
+              <span>R$ 10</span>
+              <span>~50 min</span>
+            </div>
+
+            <div class="place-section highlight-box">
+              <h3>Por que conhecer?</h3>
+              <p>Este museu preserva e apresenta a contribuição dos povos africanos na formação cultural do Brasil, com acervo único de arte sacra candomblé e registros históricos.</p>
+            </div>
+
+            <div class="place-section">
+              <h3>História</h3>
+              <p>Inaugurado em 1982 na UFBA, o museu nasceu do movimento negro baiano que buscava visibilidade para narrativas historicamente silenciadas. Reúne mais de 2.000 peças que contam a resistência e a criatividade das comunidades afro-brasileiras.</p>
+            </div>
+
+            <div class="place-section">
+              <h3>Diversidade relacionada</h3>
+              <div class="tag-row">
+                <span class="tag accent">Étnica e racial</span>
+                <span class="tag accent">Afro-brasileira</span>
+                <span class="tag accent">Religiosa</span>
+                <span class="tag accent">Geracional</span>
+              </div>
+            </div>
+
+            <div class="place-section">
+              <h3>Acessibilidade</h3>
+              <div class="access-grid">
+                <div class="access-item ok"><svg class="ico ico-sm"><use href="#i-ramp"/></svg> Rampas</div>
+                <div class="access-item ok"><svg class="ico ico-sm"><use href="#i-elevator"/></svg> Elevador</div>
+                <div class="access-item ok"><svg class="ico ico-sm"><use href="#i-restroom"/></svg> Banheiro acessível</div>
+                <div class="access-item warn"><svg class="ico ico-sm"><use href="#i-eye"/></svg> Audiodescrição parcial</div>
+              </div>
+              <div class="sensorial-box">
+                <h4>Ambiente sensorial</h4>
+                <div class="sensorial-bars">
+                  <div class="s-bar"><span>Ruído</span><div class="bar"><div class="fill low" style="width:30%"></div></div><small>Baixo</small></div>
+                  <div class="s-bar"><span>Iluminação</span><div class="bar"><div class="fill med" style="width:55%"></div></div><small>Média</small></div>
+                  <div class="s-bar"><span>Movimentação</span><div class="bar"><div class="fill med" style="width:45%"></div></div><small>Média</small></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="place-section">
+              <h3>Experimente também</h3>
+              <div class="h-scroll related-places">
+                <article class="related-card" data-go="place">
+                  <img src="https://images.unsplash.com/photo-1555881400-74d7acaacd8b?auto=format&fit=crop&w=200&q=80" alt="Pelourinho">
+                  <span>Pelourinho</span>
+                  <small>800 m</small>
+                </article>
+                <article class="related-card" data-go="place">
+                  <img src="https://images.unsplash.com/photo-1533174072545-7a4b6ad508fa?auto=format&fit=crop&w=200&q=80" alt="Terreiro">
+                  <span>Terreiro Ilê Axé</span>
+                  <small>3,4 km</small>
+                </article>
+                <article class="related-card" data-go="place">
+                  <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=200&q=80" alt="Restaurante">
+                  <span>Sabor da Bahia</span>
+                  <small>900 m</small>
+                </article>
+              </div>
+            </div>
+
+            <div class="source-box">
+              <small>Fonte: Secretaria de Cultura da Bahia · Atualizado em mar/2026</small>
+            </div>
+          </div>
+
+          <div class="place-footer">
+            <button class="btn-ghost" data-go="map">Ver no mapa</button>
+            <button class="btn-primary" data-go="route-create">Adicionar ao roteiro</button>
+          </div>
+        </section>
+
+        <!-- ═══ TELA 7: EVENTOS ═══ -->
+        <section class="screen has-bottom-nav" id="screen-events">
+          <div class="events-top">
+            <h2>Eventos culturais</h2>
+            <p>Manifestações, festivais e encontros na região</p>
+            <div class="date-tabs">
+              <button class="date-tab active">Hoje</button>
+              <button class="date-tab">Amanhã</button>
+              <button class="date-tab">Fim de semana</button>
+              <button class="date-tab">Este mês</button>
+            </div>
+          </div>
+
+          <div class="event-featured" data-go="place">
+            <img src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=800&q=80" alt="Festival de música">
+            <div class="event-featured-overlay">
+              <span class="event-badge live"><span class="live-dot"></span> Acontecendo agora</span>
+              <h3>Roda de Capoeira no Pelourinho</h3>
+              <p>Hoje · 16h–19h · Gratuito · 800 m</p>
+            </div>
+          </div>
+
+          <div class="events-list">
+            <article class="event-card" data-go="place">
+              <div class="event-date">
+                <strong>14</strong>
+                <span>AGO</span>
+              </div>
+              <img src="https://images.unsplash.com/photo-1460661419346-148dbac24684?auto=format&fit=crop&w=200&q=80" alt="Exposição">
+              <div class="event-info">
+                <h4>Exposição: Memórias da Diáspora</h4>
+                <p>Centro Cultural · 14h–20h</p>
+                <div class="tag-row"><span class="tag">Arte</span><span class="tag">Afro-brasileira</span></div>
+              </div>
+            </article>
+            <article class="event-card" data-go="place">
+              <div class="event-date">
+                <strong>15</strong>
+                <span>AGO</span>
+              </div>
+              <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=200&q=80" alt="Feira">
+              <div class="event-info">
+                <h4>Feira Gastronômica Comunitária</h4>
+                <p>Praça da Sé · 10h–16h</p>
+                <div class="tag-row"><span class="tag">Gastronomia</span><span class="tag">Comunitário</span></div>
+              </div>
+            </article>
+            <article class="event-card" data-go="place">
+              <div class="event-date">
+                <strong>16</strong>
+                <span>AGO</span>
+              </div>
+              <img src="https://images.unsplash.com/photo-1501281668745-f7f57925c3b4?auto=format&fit=crop&w=200&q=80" alt="Palestra">
+              <div class="event-info">
+                <h4>Roda de conversa: História LGBTQIA+ na Bahia</h4>
+                <p>Biblioteca Pública · 18h</p>
+                <div class="tag-row"><span class="tag">LGBTQIA+</span><span class="tag">História</span></div>
+              </div>
+            </article>
+            <article class="event-card" data-go="place">
+              <div class="event-date">
+                <strong>17</strong>
+                <span>AGO</span>
+              </div>
+              <img src="https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?auto=format&fit=crop&w=200&q=80" alt="Oficina">
+              <div class="event-info">
+                <h4>Oficina de Percussão Afro</h4>
+                <p>Casa do Carnaval · 15h · R$ 20</p>
+                <div class="tag-row"><span class="tag">Música</span><span class="tag">Oficina</span></div>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <!-- ═══ TELA 8: CRIAR ROTEIRO ═══ -->
+        <section class="screen" id="screen-route-create">
+          <div class="route-create-header page-toolbar">
+            <button class="btn-icon back-btn" data-go="home" aria-label="Voltar">
+              <svg class="ico"><use href="#i-back"/></svg>
+            </button>
+            <div class="page-toolbar-title">
+              <h2>Criar meu roteiro</h2>
+            </div>
+            <span class="page-toolbar-spacer" aria-hidden="true"></span>
+          </div>
+
+          <div class="route-form">
+            <div class="form-group">
+              <label>Tempo disponível</label>
+              <div class="chip-row">
+                <button class="chip sm" data-chip>1h</button>
+                <button class="chip sm" data-chip>2h</button>
+                <button class="chip sm selected" data-chip>4h</button>
+                <button class="chip sm" data-chip>1 dia</button>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label>Distância máxima</label>
+              <input type="range" class="range-slider" min="1" max="10" value="5" id="distRange">
+              <div class="range-labels"><span>1 km</span><span id="distValue">5 km</span><span>10 km</span></div>
+            </div>
+
+            <div class="form-group">
+              <label>Interesses para o roteiro</label>
+              <div class="chip-grid compact">
+                <button class="chip selected" data-chip><svg class="ico"><use href="#i-food"/></svg><span>Gastronomia</span></button>
+                <button class="chip selected" data-chip><svg class="ico"><use href="#i-history"/></svg><span>História</span></button>
+                <button class="chip selected" data-chip><svg class="ico"><use href="#i-afro"/></svg><span>Afro-brasileira</span></button>
+                <button class="chip" data-chip><svg class="ico"><use href="#i-art"/></svg><span>Arte</span></button>
+                <button class="chip" data-chip><svg class="ico"><use href="#i-religion"/></svg><span>Religião</span></button>
+                <button class="chip" data-chip><svg class="ico"><use href="#i-access"/></svg><span>Acessível</span></button>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label>Tipo de experiência</label>
+              <div class="option-cards sm">
+                <button class="option-card selected" data-option>
+                  <svg class="ico ico-lg"><use href="#i-star"/></svg>
+                  <strong>Mix equilibrado</strong>
+                </button>
+                <button class="option-card" data-option>
+                  <svg class="ico ico-lg"><use href="#i-compass"/></svg>
+                  <strong>Pouco conhecidos</strong>
+                </button>
+              </div>
+            </div>
+
+            <div class="route-preview-card">
+              <img src="https://images.unsplash.com/photo-1480714378408-67cf9d4bcfcb?auto=format&fit=crop&w=400&q=80" alt="Preview roteiro">
+              <div>
+                <strong>Prévia do roteiro</strong>
+                <p>~4 paradas · 4h · 3,8 km a pé · R$ 35 aprox.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="route-create-footer">
+            <button class="btn-primary btn-lg" data-go="route-result">Gerar roteiro cultural</button>
+          </div>
+        </section>
+
+        <!-- ═══ TELA 9: ROTEIRO GERADO ═══ -->
+        <section class="screen has-bottom-nav" id="screen-route-result">
+          <div class="route-result-toolbar page-toolbar">
+            <button class="btn-icon back-btn" data-go="route-create" aria-label="Voltar">
+              <svg class="ico"><use href="#i-back"/></svg>
+            </button>
+            <div class="route-result-title page-toolbar-title">
+              <h2>Roteiro cultural</h2>
+              <p>Salvador · 4 h · 3,8 km</p>
+            </div>
+            <button class="btn-icon" aria-label="Compartilhar">
+              <svg class="ico"><use href="#i-share"/></svg>
+            </button>
+          </div>
+
+          <div class="route-stats">
+            <div class="stat"><strong>4</strong><span>Paradas</span></div>
+            <div class="stat"><strong>4h</strong><span>Duração</span></div>
+            <div class="stat"><strong>3,8 km</strong><span>Distância</span></div>
+            <div class="stat"><strong>R$ 35</strong><span>Custo aprox.</span></div>
+          </div>
+
+          <div class="route-map-mini">
+            <div class="route-line"></div>
+            <div class="route-stop-mini" style="top:10%;left:20%"></div>
+            <div class="route-stop-mini" style="top:35%;left:45%"></div>
+            <div class="route-stop-mini" style="top:55%;left:30%"></div>
+            <div class="route-stop-mini" style="top:80%;left:60%"></div>
+          </div>
+
+          <div class="route-timeline">
+            <article class="route-stop" data-go="place">
+              <div class="stop-time">09:00</div>
+              <div class="stop-line"><div class="stop-dot"></div></div>
+              <div class="stop-content">
+                <img src="https://images.unsplash.com/photo-1582552936334-5f8996b07112?auto=format&fit=crop&w=200&q=80" alt="Museu">
+                <div>
+                  <h4>Museu Afro-Brasileiro</h4>
+                  <p>Conheça a formação cultural da região.</p>
+                  <span class="stop-dur">50 min</span>
+                </div>
+              </div>
+            </article>
+            <article class="route-stop" data-go="place">
+              <div class="stop-time">10:15</div>
+              <div class="stop-line"><div class="stop-dot"></div></div>
+              <div class="stop-content">
+                <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=200&q=80" alt="Feira">
+                <div>
+                  <h4>Feira de São Joaquim</h4>
+                  <p>Produtores e artesãos locais há 40 anos.</p>
+                  <span class="stop-dur">45 min</span>
+                </div>
+              </div>
+            </article>
+            <article class="route-stop" data-go="place">
+              <div class="stop-time">11:30</div>
+              <div class="stop-line"><div class="stop-dot"></div></div>
+              <div class="stop-content">
+                <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=200&q=80" alt="Restaurante">
+                <div>
+                  <h4>Restaurante Sabor da Bahia</h4>
+                  <p>Pratos tradicionais da culinária baiana.</p>
+                  <span class="stop-dur">1h</span>
+                </div>
+              </div>
+            </article>
+            <article class="route-stop" data-go="place">
+              <div class="stop-time">13:00</div>
+              <div class="stop-line"><div class="stop-dot last"></div></div>
+              <div class="stop-content">
+                <img src="https://images.unsplash.com/photo-1460661419346-148dbac24684?auto=format&fit=crop&w=200&q=80" alt="Centro cultural">
+                <div>
+                  <h4>Centro Cultural Casa do Carnaval</h4>
+                  <p>Exposição sobre história afro-brasileira.</p>
+                  <span class="stop-dur">1h</span>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <div class="route-actions">
+            <button class="btn-ghost">Salvar roteiro</button>
+            <button class="btn-primary">Iniciar roteiro</button>
+          </div>
+        </section>
+
+        <!-- ═══ TELA 10: PERFIL ═══ -->
+        <section class="screen has-bottom-nav" id="screen-profile">
+          <div class="profile-header">
+            <div class="profile-avatar">
+              <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=200&q=80" alt="Foto de Ana Silva">
+            </div>
+            <div class="profile-info">
+              <h2>Ana Silva</h2>
+              <p>Exploradora cultural · Salvador</p>
+            </div>
+            <button class="btn-icon" aria-label="Configurações">
+              <svg class="ico"><use href="#i-settings"/></svg>
+            </button>
+          </div>
+
+          <div class="passport-card">
+            <h3>Passaporte Cultural</h3>
+            <div class="passport-stats">
+              <div><strong>12</strong><span>Lugares</span></div>
+              <div><strong>5</strong><span>Eventos</span></div>
+              <div><strong>3</strong><span>Roteiros</span></div>
+              <div><strong>8</strong><span>Histórias</span></div>
+            </div>
+            <div class="passport-badges">
+              <span class="badge-pill">3 gastronômicas</span>
+              <span class="badge-pill">2 patrimônios</span>
+              <span class="badge-pill">1 manifestação religiosa</span>
+            </div>
+          </div>
+
+          <div class="section-head">
+            <h3>Minha viagem</h3>
+          </div>
+          <div class="trip-cards">
+            <button class="trip-card">
+              <img src="https://images.unsplash.com/photo-1555881400-74d7acaacd8b?auto=format&fit=crop&w=200&q=80" alt="Salvador">
+              <div><strong>Salvador</strong><span>14 lugares salvos</span></div>
+              <span class="trip-arrow">→</span>
+            </button>
+            <button class="trip-card">
+              <img src="https://images.unsplash.com/photo-1444723127937-aa03d2be7941?auto=format&fit=crop&w=200&q=80" alt="São Paulo">
+              <div><strong>São Paulo</strong><span>8 lugares salvos</span></div>
+              <span class="trip-arrow">→</span>
+            </button>
+          </div>
+
+          <div class="section-head">
+            <h3>Favoritos recentes</h3>
+          </div>
+          <div class="fav-list">
+            <article class="fav-item" data-go="place">
+              <img src="https://images.unsplash.com/photo-1582552936334-5f8996b07112?auto=format&fit=crop&w=100&q=80" alt="">
+              <div><strong>Museu Afro-Brasileiro</strong><small>História · 1,2 km</small></div>
+              <span>♥</span>
+            </article>
+            <article class="fav-item" data-go="place">
+              <img src="https://images.unsplash.com/photo-1533174072545-7a4b6ad508fa?auto=format&fit=crop&w=100&q=80" alt="Terreiro Ilê Axé">
+              <div><strong>Terreiro Ilê Axé</strong><small>Religião · 3,4 km</small></div>
+              <span>♥</span>
+            </article>
+          </div>
+
+          <div class="profile-menu">
+            <button class="menu-item" data-go="onboarding"><svg class="ico"><use href="#i-compass"/></svg> Preferências e interesses</button>
+            <button class="menu-item"><svg class="ico"><use href="#i-access"/></svg> Acessibilidade</button>
+            <button class="menu-item"><svg class="ico"><use href="#i-book"/></svg> Diário cultural</button>
+            <button class="menu-item"><svg class="ico"><use href="#i-info"/></svg> Sobre o Raízes</button>
+          </div>
+        </section>
+
+        <!-- Bottom Navigation -->
+        <nav class="bottom-nav" id="bottomNav">
+          <button class="nav-item active" data-nav="home">
+            <svg class="nav-svg" viewBox="0 0 24 24"><path d="M4 10.5L12 4l8 6.5V19a1 1 0 01-1 1h-5v-6H10v6H5a1 1 0 01-1-1v-8.5z"/></svg>
+            <span>Início</span>
+          </button>
+          <button class="nav-item" data-nav="discover">
+            <svg class="nav-svg" viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M16 16l5 5"/></svg>
+            <span>Explorar</span>
+          </button>
+          <button class="nav-item" data-nav="map">
+            <svg class="nav-svg" viewBox="0 0 24 24"><path d="M9 19l-6-3V6l6 3 6-3 6 3v10l-6-3-6 3z"/><path d="M9 6v10M15 3v10"/></svg>
+            <span>Mapa</span>
+          </button>
+          <button class="nav-item" data-nav="route-result">
+            <svg class="nav-svg" viewBox="0 0 24 24"><circle cx="6" cy="18" r="2"/><circle cx="18" cy="6" r="2"/><path d="M8 17l8-8"/></svg>
+            <span>Roteiros</span>
+          </button>
+          <button class="nav-item" data-nav="profile">
+            <svg class="nav-svg" viewBox="0 0 24 24"><circle cx="12" cy="8" r="3.5"/><path d="M5 19a7 7 0 0114 0"/></svg>
+            <span>Perfil</span>
+          </button>
+        </nav>
+
+      </div>
+    </div>
+  </div>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
