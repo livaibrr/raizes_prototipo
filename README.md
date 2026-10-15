@@ -6,7 +6,7 @@ Um mapa diz que existe uma feira a 800 metros. O Raízes conta que ela funciona 
 
 ### ▶ [Abrir o protótipo no navegador](https://livaibrr.github.io/raizes_prototipo/)
 
-Funciona no computador e no celular, sem instalar nada. Para ver como no app, abra pelo celular ou reduza a janela do navegador.
+Funciona no computador e no aparelho celular, sem instalar nada. Para ver como no app, abra pelo celular ou reduza a janela do navegador.
 
 ---
 
